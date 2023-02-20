@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "dispatcher",
+    "slug": "dispatcher",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "dispatcher"
+}
