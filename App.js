@@ -1,21 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Splash from './src/components/splashScreen';
+import Signup  from './src/components/Signup';
+import Verification from './src/components/Verify';
+import CustomerPayment from './src/components/CustomerPayment';
+import Profile from './src/components/Profile';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  <Splash />,
+  <Signup />,
+ <Verification />,
+ <CustomerPayment />,
+<Profile />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
