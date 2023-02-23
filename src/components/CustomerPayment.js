@@ -162,9 +162,9 @@ const style = StyleSheet.create({
         width:400,
         height: 300,
         padding: 10,
-      border: 2,
-      borderWidth:2,
-      borderColor: "black",
+        border: 2,
+        borderWidth:2,
+        borderColor: "whitesmoke",
         
         zIndex: 0,
         display: "flex",
@@ -209,7 +209,7 @@ const style = StyleSheet.create({
         justifyContent: "center",
         marginTop: 20,
         marginBottom: 20,
-        backgroundColor: "black",
+        backgroundColor: "#58489E",
         marginLeft: 50,
         
       },

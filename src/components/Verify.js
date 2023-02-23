@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         width: 70,
         height: 70,
         border: 2,
-        borderColor: "black",
+        borderColor: "#58489E",
         borderWidth:2,
         padding: 25,
         margin: 10
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         marginTop: 40,
-        backgroundColor: "black",
+        backgroundColor: "#58489E",
       },
       loginText: {
         color: "white",

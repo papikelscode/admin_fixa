@@ -29,6 +29,8 @@ export default function Signup({ navigation }){
            </View>
       <Image style={styles.image} source={require("../assets/images/images.png")} /> 
       <StatusBar style="auto" />
+      
+      <View style = {styles.card}>
       <View style={styles.inputView}>
         <TextInput style={styles.TextInput}
         
@@ -72,7 +74,7 @@ export default function Signup({ navigation }){
        placeholderTextColor="black"
        />
       </View>
-      
+      </View>
       <TouchableOpacity style={styles.loginBtn}>
         <Text style={styles.loginText}>SIGN UP</Text> 
       </TouchableOpacity> 
@@ -117,7 +119,28 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    
   },
+  card: {
+    alignContent:"center",
+    width:400,
+    height: 400,
+    padding: 10,
+    border: 2,
+    borderWidth:2,
+    borderColor: "whitesmoke",
+    zIndex: 0,
+    display: "flex",
+    justifyContent: "space-around",
+    flexWrap: "wrap",
+    borderRadius: 30,
+    backgroundColor: "white",
+    marginTop: -65,
+    
+    
+
+
+},
   image: {
     marginBottom: 40,
   },
@@ -157,7 +180,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 20,
     marginBottom: 20,
-    backgroundColor: "black",
+    backgroundColor: "#58489E",
   },
   loginText: {
     color: "white",

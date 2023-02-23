@@ -88,7 +88,7 @@ export default function Splash({ navigation }){
             alignItems: "center",
             justifyContent: "center",
             marginTop: 3,
-            backgroundColor: "green",
+            backgroundColor: "#58489E",
           },
           loginText: {
             color: "white",

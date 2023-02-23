@@ -99,7 +99,7 @@ import {
       },
       Header: {
         backgroundColor: "#58489E",
-        height: 350,
+        height: 300,
         width: "100%",
       },
       HeadText: {
@@ -121,7 +121,7 @@ import {
       },
       proOption: {
         display: 'flex',
-        marginTop: 80,
+        marginTop: 40,
         justifyContent: 'center',
         alignContent: 'center',
         alignItems: "center",
@@ -146,8 +146,8 @@ import {
         height: 400,
         padding: 10,
         border: 2,
-        borderWidth: 2,
-        borderColor: "black",
+        borderWidth:2,
+        borderColor: "whitesmoke",
         marginTop: 25,
         flexWrap: "wrap",
         borderRadius: 30,
@@ -211,7 +211,7 @@ import {
         justifyContent: "center",
         marginTop: 10,
         marginBottom: 20,
-        backgroundColor: "black",
+        backgroundColor: "#58489E",
         marginLeft: 50,
         
       },

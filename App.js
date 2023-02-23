@@ -6,14 +6,16 @@ import Signup  from './src/components/Signup';
 import Verification from './src/components/Verify';
 import CustomerPayment from './src/components/CustomerPayment';
 import Profile from './src/components/Profile';
+import Booking from './src/components/Book';
 
 export default function App() {
   return (
   <Splash />,
-  <Signup />,
- <Verification />,
- <CustomerPayment />,
-<Profile />
+<Signup />,
+<Verification />,
+<CustomerPayment />,
+<Profile />,
+<Booking /> 
   );
 }
 
