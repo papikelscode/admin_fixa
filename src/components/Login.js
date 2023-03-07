@@ -8,11 +8,10 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-export default function SignupScreen({ navigation }){
-  const pressHandler = () => {
-     navigation.push('Verification');
+export default function LoginScreen({ navigation }){
+  const pressHandlers = () => {
+     navigation.push('UserSignup');
   }
-  
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -21,21 +20,29 @@ export default function SignupScreen({ navigation }){
         <Text style={styles.heading}>DISPATCHER</Text>
       </ImageBackground>
       <View style={styles.card}>
-      <TextInput style={styles.input} placeholder="First name" />
-      <TextInput style={styles.input} placeholder="Last name" />
-      <TextInput style={styles.input} placeholder="Phone Number" keyboardType={'phone-pad'}/>
         <TextInput style={styles.input} placeholder="Email" />
         <TextInput style={styles.input} placeholder="Password" secureTextEntry={true} />
 
-
-        <TouchableOpacity style={styles.button}  onPress={pressHandler}>
-          <Text style={styles.buttonText}>Signup</Text>
+        <TouchableOpacity style={styles.forgotPasswordButton}>
+          <Text style={styles.forgotPasswordButtonText}>Forgot?</Text>
         </TouchableOpacity>
 
-       
+        <TouchableOpacity style={styles.button} onpress={pressHandlers}>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+
+<TouchableOpacity style={styles.createAccountButton} onpress={pressHandler} >
+          <Text style={styles.createAccountButtonText}>Create Account</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.createAccountButton} >
+          <Text style={styles.createAccountButtonText}>Dispatcher create account</Text>
+        </TouchableOpacity>
+
+        
       </View>
     </View>
   );
+
 };
 
 const styles = StyleSheet.create({
@@ -47,17 +54,19 @@ const styles = StyleSheet.create({
   header: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 50,
+    paddingTop: 20,
     paddingBottom: 20,
     width: '100%',
-    height: 200,
+    height: 100,
     backgroundColor: "#58489E"
   },
+
   heading: {
     fontSize: 30,
     fontWeight: 'bold',
     color: '#fff',
-    marginBottom: 10,
+    marginTop: 0,
+    paddingBottom: -50
   },
   forgotPasswordButton: {
     width:'100%',
@@ -81,7 +90,7 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     elevation: 5,
     padding: 20,
-    marginTop: 50,
+    marginTop: 100,
     width: '90%',
     alignItems: 'center',
   },
@@ -114,5 +123,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+
+
 
 

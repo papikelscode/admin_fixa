@@ -12,7 +12,7 @@ import {
 } from "react-native";
 
 
-    export default function Profile({ navigation }){
+    export default function Dispatchaccount({ navigation }){
         return(
             <View style = {style.Container}>
                 <View style = {style.Header}>
@@ -26,10 +26,11 @@ import {
                 <TouchableOpacity style = {style.optionbts}>
                 <Text style={style.loginText}>PROFILE</Text> 
                 </TouchableOpacity>
-                
-
                 <TouchableOpacity style = {style.optionbts}>
-                <Text style={style.loginText}>HOME ADDRESS </Text> 
+                <Text style={style.loginText}>WORK DETAILS</Text> 
+                </TouchableOpacity>
+                <TouchableOpacity style = {style.optionbts}>
+                <Text style={style.loginText}>ACCOUNT DETAILS </Text> 
                 </TouchableOpacity>
                
             </View>
@@ -41,14 +42,12 @@ import {
                        
 
                     </View>
-                    <TouchableOpacity style={style.changeBtn}>
-        <Text style={style.btnText}>UPDATE PICTURE</Text> 
-      </TouchableOpacity> 
+                     
                     
                     <View style = {style.Cardcontent}>
  
         <Text style = {style.label}>
-            NAME  
+            ACCOUNT NAME  
         </Text>
         <TextInput style= {style.TextInput} editable={false}
     
@@ -58,7 +57,7 @@ import {
     </View>
     <View style = {style.Cardcontent}>
         <Text style = {style.label}>
-          EMAIL ADDRESS
+          ACCOUNT NUMBER
         </Text>
         <TextInput style= {style.TextInput} editable={false}
         
@@ -68,7 +67,7 @@ import {
     </View>
     <View style = {style.Cardcontent}>
         <Text style = {style.label}>
-            PHONE NUMBER
+            BANK ACCOUNT NAME
         </Text>
         <TextInput style= {style.TextInput} editable={false}
         
@@ -98,12 +97,12 @@ import {
       },
       Header: {
         backgroundColor: "#58489E",
-        height: 180,
+        height: 300,
         width: "100%",
       },
       HeadText: {
         fontSize: 30,
-        paddingTop: 10,
+        paddingTop: 140,
         color: "white",
         fontWeight: "900",
         paddingLeft: 10,
@@ -142,7 +141,7 @@ import {
       Card : {
         marginLeft: 5,
         width: 400,
-        height: 450,
+        height:410,
         padding: 10,
         border: 2,
         borderWidth:2,
@@ -211,7 +210,7 @@ import {
         marginTop: 10,
         marginBottom: 20,
         backgroundColor: "#58489E",
-        marginLeft: 30,
+        marginLeft: 50,
         
       },
       btnText: {

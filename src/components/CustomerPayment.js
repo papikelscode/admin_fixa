@@ -9,6 +9,7 @@ import {
   Button,
   TouchableOpacity,
   Card,
+  ScrollView
 } from "react-native";
 
 
@@ -20,7 +21,8 @@ import {
 export default function CustomerPayment({ navigation }){
    
    return(
-    <View style = {style.Container}>
+<ScrollView>
+<View style = {style.Container}>
         <View style = {style.Header}>
             <Text style = {style.HeadText}>
                 PAYMENT
@@ -30,17 +32,7 @@ export default function CustomerPayment({ navigation }){
             </Text>
         </View>
         
-        <View style = {style.payType}>
-        <Image style={style.img} source = {require('../assets/images/icons8-magnetic-card-96.png')}
-         
-         />
-           <Image style={style.img} source = {require('../assets/images/icons8-stripe-96.png')}
        
-       />
-         <Image style={style.img} source = {require('../assets/images/icons8-paypal-64.png')}
-       
-       />
-        </View>
         <View style={{
         shadowColor: "white",
         shadowOffset: {
@@ -106,6 +98,8 @@ export default function CustomerPayment({ navigation }){
       </TouchableOpacity> 
 
     </View>
+</ScrollView>
+    
    )
 }
 const style = StyleSheet.create({
@@ -113,17 +107,17 @@ const style = StyleSheet.create({
       
        marginTop: 0,
       
-       maxHeight: 500
+     
     
       },
       Header: {
         backgroundColor: "#58489E",
-        height: 250,
+        height: 150,
         width: "100%",
       },
       HeadText: {
         fontSize: 30,
-        paddingTop: 110,
+        paddingTop: 50,
         color: "white",
         fontWeight: "900",
         paddingLeft: 10,
@@ -172,6 +166,8 @@ const style = StyleSheet.create({
         flexWrap: "wrap",
         borderRadius: 30,
         backgroundColor: "white",
+        marginLeft: 0,
+        marginTop:50
         
         
 
@@ -189,7 +185,7 @@ const style = StyleSheet.create({
       },
       
       TextInput: {
-        width: 170,
+        width: 150,
         height: 45,
         alignItems: 'center',
         border: 2,

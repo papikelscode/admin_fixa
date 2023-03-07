@@ -6,35 +6,37 @@ import {
   ImageBackground,
   TextInput,
   TouchableOpacity,
+  ScrollView
 } from 'react-native';
 
-export default function SignupScreen({ navigation }){
-  const pressHandler = () => {
-     navigation.push('Verification');
-  }
-  
+const Dispatchersignup = () => {
   return (
-    <View style={styles.container}>
+    <ScrollView>
+  <View style={styles.container}>
       <ImageBackground
        
         style={styles.header}>
-        <Text style={styles.heading}>DISPATCHER</Text>
+        <Text style={styles.heading}>DISPATCHER SIGNUP</Text>
       </ImageBackground>
       <View style={styles.card}>
-      <TextInput style={styles.input} placeholder="First name" />
-      <TextInput style={styles.input} placeholder="Last name" />
-      <TextInput style={styles.input} placeholder="Phone Number" keyboardType={'phone-pad'}/>
-        <TextInput style={styles.input} placeholder="Email" />
-        <TextInput style={styles.input} placeholder="Password" secureTextEntry={true} />
+        <TextInput style={styles.input} placeholder="Name" />
+        <TextInput style={styles.input} placeholder="Email Address" />
+        <TextInput style= {styles.input} keyboardType={'phone-pad'} placeholder = "Phone number " />
+       
 
 
-        <TouchableOpacity style={styles.button}  onPress={pressHandler}>
-          <Text style={styles.buttonText}>Signup</Text>
+       
+
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Create Account</Text>
         </TouchableOpacity>
 
        
       </View>
     </View>
+
+    </ScrollView>
+  
   );
 };
 
@@ -57,7 +59,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: 'bold',
     color: '#fff',
-    marginBottom: 10,
+    marginBottom: 5,
+    fontSize: 30,
+    
+    color: "white",
+    fontWeight: "900",
+    paddingRight: 150,
   },
   forgotPasswordButton: {
     width:'100%',
@@ -80,8 +87,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.2,
     shadowRadius: 5,
     elevation: 5,
-    padding: 20,
-    marginTop: 50,
+    padding: 40,
+    marginTop: 90,
     width: '90%',
     alignItems: 'center',
   },
@@ -115,4 +122,4 @@ const styles = StyleSheet.create({
   },
 });
 
-
+export default Dispatchersignup;

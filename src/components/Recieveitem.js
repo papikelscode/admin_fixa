@@ -9,8 +9,8 @@ import {
   Button,
   TouchableOpacity,
   Card,
-  Modal,
   Alert, 
+  Modal,
   Pressable,
  
   ScrollView,
@@ -25,34 +25,33 @@ import {
 // </View>
 //     )
 // }
-export default function Booking({ navigation }){
+export default function Receiver({ navigation }){
   const [modalVisible, setModalVisible] = useState(false);
-  const receive = () => {
-    navigation.push('receiveorder')
-  }
   const order = () => {
     navigation.push('makeorder')
   }
-  
+  const Booking = () => {
+    navigation.push('Order')
+   }
     return(
       <ScrollView>
-        <View >
+ <View >
 <View style = {style.Container}>
          <View style = {style.Header}>
          <Text style = {style.HeadText}>
-                DISPATCH AN ITEM 
+                RECEIVE AN ITEM 
             </Text>
             <Text style = {style.smallText}>
                 AND HAVE IT DELIVERED WITH OUT DELAY
             </Text>
 
             <View style={style.Row}>
-              <TouchableOpacity style = {style.button}>
+              <TouchableOpacity style = {style.button} onPress ={Booking}>
                 <Text style = {style.buttonText}>
                   SEND ITEM
                 </Text>
               </TouchableOpacity>
-              <TouchableOpacity style = {style.button} onPress= {receive}>
+              <TouchableOpacity style = {style.button}>
                 <Text style = {style.buttonText}>
                   RECEIVE ITEM
                 </Text>
@@ -71,19 +70,15 @@ export default function Booking({ navigation }){
             placeholderTextColor="black"
             
             ></TextInput>
+            <TextInput style = {style.TextInput}  placeholder="Pick up phone number"
+            placeholderTextColor="black"></TextInput>
             <TextInput style = {style.TextInput}  placeholder="Drop at "
             placeholderTextColor="black"></TextInput>
             <TextInput style = {style.TextInput}  placeholder="Name of item"
             placeholderTextColor="black"></TextInput>
-            <TextInput style = {style.TextInput}  placeholder="Name of receiver"
+            <TextInput style = {style.TextInput}  placeholder="Description of item"
             placeholderTextColor="black"></TextInput>
-            <TextInput style = {style.TextInput}  placeholder="Phone number"
-            placeholderTextColor="black"></TextInput>
-             <TextInput style = {style.TextInput}  placeholder="Receiver Address"
-            placeholderTextColor="black"></TextInput>
-             <TextInput style = {style.TextInput}  placeholder="Description of item"
-            placeholderTextColor="black"></TextInput>
-        <View style={style.Rows}>
+              <View style={style.Rows}>
             <View style={style.radioButtonContainer}>
    <TouchableOpacity onPress={() => {}} style={style.radioButton}>
      <View style={style.radioButtonIcon} />
@@ -94,7 +89,7 @@ export default function Booking({ navigation }){
  </View>
  <View style={style.radioButtonContainer}>
    <TouchableOpacity onPress={() => {}} style={style.radioButton}>
-     <View style={style.radioButtonIconmain} />
+     <View style={style.radioButtonIcon} />
    </TouchableOpacity>
    <TouchableOpacity onPress={() => {}}>
      <Text style={style.radioButtonText}>Standard Dispatch</Text>
@@ -102,7 +97,7 @@ export default function Booking({ navigation }){
  </View>
  <View style={style.radioButtonContainer}>
    <TouchableOpacity onPress={() => {}} style={style.radioButton}>
-     <View style={style.radioButtonIcon} />
+     <View style={style.radioButtonIconmain} />
    </TouchableOpacity>
    <TouchableOpacity onPress={() => {}}>
      <Text style={style.radioButtonText}>Shedule Dispatch</Text>
@@ -110,6 +105,8 @@ export default function Booking({ navigation }){
  </View>
             </View>
             
+             
+        
          </View>
          <View style={style.centeredView}>
       <Modal
@@ -122,7 +119,7 @@ export default function Booking({ navigation }){
         }}>
         <View style={style.centeredView}>
           <View style={style.modalView}>
-            <Text style={style.modalText}>Your Dispatch  has been sent , Here is your tracking ID</Text>
+            <Text style={style.modalText}>Your Dispatch request has been sent , Here is your tracking ID</Text>
             <Text style={style.modalText}>11223344</Text>
 
             <Pressable
@@ -147,7 +144,7 @@ export default function Booking({ navigation }){
      </View>
      </View>
       </ScrollView>
-      
+     
         
      
     )
@@ -176,7 +173,7 @@ const style = StyleSheet.create({
       border: 2,
       borderWidth:2,
       borderColor: "whitesmoke",
-      marginTop: 10,
+      marginTop: 20,
     
         zIndex: 0,
         display: "flex",
@@ -197,8 +194,8 @@ const style = StyleSheet.create({
         border: 2,
         borderColor: "whitesmoke",
         borderWidth: 2,
-        marginBottom: 2,
-        marginLeft: 5,
+        marginBottom: 0,
+        marginLeft: 10,
         fontSize: 15,
         padding: 15,
         fontFamily: "Roboto"
@@ -223,7 +220,7 @@ const style = StyleSheet.create({
         height: 50,
         alignItems: "center",
         justifyContent: "center",
-        marginTop: 0,
+        marginTop: 20,
         backgroundColor: "#58489E",
         marginLeft: 80
       },
@@ -246,7 +243,7 @@ const style = StyleSheet.create({
     alignContent: 'center',
     alignItems: "center",
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-evenly'
       },
       buttonText: {
         color: "black",
@@ -258,37 +255,6 @@ const style = StyleSheet.create({
         color: "white",
         paddingLeft: 10, 
 
-      },
-      radioButtonContainer: {
-        flexDirection: "row",
-        alignItems: "center",
-        marginRight: 0,
-        padding: 10
-        
-  
-        
-  
-      },
-      radioButton: {
-        height: 20,
-        width: 20,
-        backgroundColor: "#F8F8F8",
-        borderRadius: 10,
-        borderWidth: 1,
-        borderColor: "#E6E6E6",
-        alignItems: "center",
-        justifyContent: "center",
-       
-      },
-      radioButtonIconmain: {
-        height: 14,
-        width: 14,
-        borderRadius: 7,
-        backgroundColor: "#98CFB6"
-      },
-      radioButtonText: {
-        fontSize: 13,
-        marginLeft: 0
       },
       centeredView: {
         flex: 1,
@@ -324,7 +290,7 @@ const style = StyleSheet.create({
         justifyContent: "center",
         marginTop: -15,
         backgroundColor: "#58489E",
-        marginLeft: 0,
+        marginLeft: 0
       },
       buttonClose: {
         backgroundColor: '#2196F3',
@@ -339,5 +305,36 @@ const style = StyleSheet.create({
         marginBottom: 15,
         textAlign: 'center',
       },
+      radioButtonContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginRight: 0,
+        padding: 10
+        
+  
+        
+  
+      },
+      radioButton: {
+        height: 20,
+        width: 20,
+        backgroundColor: "#F8F8F8",
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: "#E6E6E6",
+        alignItems: "center",
+        justifyContent: "center",
+       
+      },
+      radioButtonIconmain: {
+        height: 14,
+        width: 14,
+        borderRadius: 7,
+        backgroundColor: "#98CFB6"
+      },
+      radioButtonText: {
+        fontSize: 13,
+        marginLeft: 0
+      }
       
     })

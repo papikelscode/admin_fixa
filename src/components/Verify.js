@@ -10,7 +10,10 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-export default function Verification(){
+export default function Verification({ navigation }){
+  const pressHandler = () => {
+    navigation.push('Dashboard');
+ }
  return(
     <View style = {styles.container}>
         <View style = {styles.Header}>
@@ -41,7 +44,7 @@ export default function Verification(){
         <TextInput style = {styles.box}  keyboardType={'phone-pad'}></TextInput>
     </View>
 
-    <TouchableOpacity style={styles.loginBtn}>
+    <TouchableOpacity style={styles.loginBtn} onPress={pressHandler}>
         <Text style={styles.loginText}>CONFIRM</Text> 
       </TouchableOpacity> 
       <Text style = {styles.partext}>
@@ -75,7 +78,7 @@ const styles = StyleSheet.create({
     },
     Header: {
         backgroundColor: "#58489E",
-        height: 250,
+        height: 0,
         width: "100%",
       },
     image: {
@@ -87,7 +90,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
        
         alignItems: 'center',
-        marginBottom: 30
+        marginBottom: 0,
+        marginTop: -50
       
     },
     box: {
@@ -127,7 +131,7 @@ const styles = StyleSheet.create({
         height: 50,
         alignItems: "center",
         justifyContent: "center",
-        marginTop: 40,
+        marginTop: 50,
         backgroundColor: "#58489E",
       },
       loginText: {

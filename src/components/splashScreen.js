@@ -8,16 +8,16 @@ import { StyleSheet, Text, View, Image,  Button,
 
 export default function Splash({ navigation }){
    const pressHandler = () => {
-      navigation.navigate('ClientLogin');
+      navigation.push('UserSignup');
    }
    
    
       return(
          <View style={style.container}>
-         <Image style={style.img} source = {require('../assets/images/splashscreen.jpg')}
+         <Image style={style.img} source = {require('../assets/images/homescreen.jpg')}
          
            />
-             
+           
              <Text style={style.text}>
                         Courier and parcel
                     </Text>
@@ -38,9 +38,10 @@ export default function Splash({ navigation }){
        
       />
                     </View> */}
-                     <TouchableOpacity style={style.loginBtn}>
-        <Text style={style.loginText}>GET STARTED</Text> 
-      </TouchableOpacity>
+                     <TouchableOpacity style={style.loginBtn} onPress={pressHandler} >
+         <Text style={style.loginText}>GET STARTED</Text>  
+         </TouchableOpacity>
+      
                    
             </View>
       )
@@ -49,9 +50,10 @@ export default function Splash({ navigation }){
       const style = StyleSheet.create({
          container: {
             alignItems: 'center',
-            marginTop: 100,
-            padding: 20,
-            maxHeight: 500
+            marginTop: 5,
+            padding: 0,
+            maxHeight: 500,
+            backgroundColor: "white"
          
            
          
@@ -61,12 +63,14 @@ export default function Splash({ navigation }){
             fontFamily: 'sans-serif',
             fontWeight: 'bold',
             fontSize: 30,
+           
       
          },
          img:{
             width:400,
             height:500,
-            padding:50
+            padding:50,
+            
          },
          smallletter:{
             width: 300,
