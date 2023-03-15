@@ -6,6 +6,7 @@ import {
   ImageBackground,
   TextInput,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 
 export default function SignupScreen({ navigation }){
@@ -14,7 +15,8 @@ export default function SignupScreen({ navigation }){
   }
   
   return (
-    <View style={styles.container}>
+    <ScrollView>
+<View style={styles.container}>
       <ImageBackground
        
         style={styles.header}>
@@ -35,6 +37,8 @@ export default function SignupScreen({ navigation }){
        
       </View>
     </View>
+    </ScrollView>
+    
   );
 };
 
