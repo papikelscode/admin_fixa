@@ -1,8 +1,8 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import Splash from "../components/splashScreen";
-import LoginScreen from "../components/Login";
-import SignupScreen from "../components/Signup";
+
+
 import Verification from "../components/Verify";
 import Userdash from "../components/Userdash";
 import Tracker from "../components/Track";
@@ -13,31 +13,31 @@ import Receiver from "../components/Recieveitem";
 import Orderitem from "../components/Orderitem";
 import CustomerPayment from "../components/CustomerPayment";
 //import Userhistory from "../components/Userhistory";
-
-
-
+import LoginScreen from "../components/Login";
+import SignupScreen from "../components/Signup";
+//import DashboardScreen from "../components/dashboard";
 
 
 
 
 
 const screens = {
-    Dispatcher: {
+    AdminFixa: {
         screen: Splash
     },
    
-    UserSignup: {
-        screen: SignupScreen
-    },
-    Login: {
+    AdminLogin: {
         screen: LoginScreen
+    },
+    AdminSignup: {
+        screen: SignupScreen
     },
     Verification: {
         screen: Verification
     },
-    Dashboard: {
-        screen: Userdash
-    },
+    // Dashboard: {
+    //     screen: DashboardScreen
+    // },
     Track: {
         screen: Tracker
     },

@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Splash from './src/components/splashScreen';
-import LoginScreen  from './src/components/Login';
+import LoginScreen from './src/components/Login';
 import Verification from './src/components/Verify';
 import CustomerPayment from './src/components/CustomerPayment';
 import Profile from './src/components/Profile';
@@ -24,25 +24,7 @@ import Navigator from './src/navigation/mainStack'
 export default function App() {
   return (
     
-//<Splash />,
-//<LoginScreen />,
-//<Signup />,
-//<Verification />,
-//<CustomerPayment />,
-//<Profile />,
-//<Booking /> ,
-//<Dispatchersignup />,
-//<Dispatcherdash />,
-//<Receiver />,
-//<Orderitem />,
-//<Dispatchmodal />
-//<Userdash />,
-//<Tracker />,
-//<Dispatchmessage />,
-//<Dispatchprofile />,
-//<Dispatchaccount />,
-//<Dispatchhistory />,
-//<Userhistory />
+
 <Navigator />
   );
 }

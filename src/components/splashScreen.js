@@ -8,38 +8,25 @@ import { StyleSheet, Text, View, Image,  Button,
 
 export default function Splash({ navigation }){
    const pressHandler = () => {
-      navigation.push('UserSignup');
+      navigation.push('AdminLogin');
    }
-   
+   const handleSignUp = () =>{
+      navigation.push('AdminSignup')
+   }
    
       return(
          <View style={style.container}>
-         <Image style={style.img} source = {require('../assets/images/homescreen.jpg')}
+          <Image style={style.img} source = {require('../assets/images/homescreen.jpg')}
          
-           />
+           /> 
            
-             <Text style={style.text}>
-                        Courier and parcel
-                    </Text>
-                    <Text style={style.text}>
-                        delivery at its finest
-                    </Text>
-                    <Text style={style.smallletter}>
-                        Door-to-door integrated logistics service
-                        solutions for all kinds of parcels
-                    </Text>
-                    {/* <View style={style.loginBtn}>
-                    <Button style={style.loginBtn} 
-        onPress={() => navigation.navigate('ClientLogin')
-      }
-        title="Get Started"
-        color="green"
-        
-       
-      />
-                    </View> */}
+             
                      <TouchableOpacity style={style.loginBtn} onPress={pressHandler} >
-         <Text style={style.loginText}>GET STARTED</Text>  
+         <Text style={style.loginText}>Login</Text>  
+         </TouchableOpacity>
+         
+                     <TouchableOpacity style={style.loginBtn} onPress={handleSignUp} >
+         <Text style={style.loginText}>Sign up</Text>  
          </TouchableOpacity>
       
                    
